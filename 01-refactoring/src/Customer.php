@@ -25,7 +25,7 @@ public function statement() {
     $result = "Rental Record for " . $this->getName() . "\n";
 
     foreach($rentals as $rental) {
-$thisAmount=$this->calculateAmountFor($rental);
+$thisAmount=$this->obtainCharge($rental);
 
   
 
@@ -54,7 +54,7 @@ $thisAmount=$this->calculateAmountFor($rental);
 }
 
 
-    private function calculateAmountFor($rental) 
+    private function obtainCharge($rental) 
     {
     $thisAmount = 0;
         switch ($rental->getMovie()->getPriceCode())
