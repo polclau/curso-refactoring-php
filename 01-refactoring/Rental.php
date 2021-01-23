@@ -1,5 +1,6 @@
 <?php
 
+namespace Refactoring;
 class Rental {
 
 private  $_movie;
